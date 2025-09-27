@@ -62,7 +62,7 @@ nav a:hover, nav a:focus {
 .loans, .loans-image {
      grid-row: 5;
 }
-
+ 
 .contact, .contact-image {
      grid-row: 6;
 }
@@ -70,13 +70,16 @@ nav a:hover, nav a:focus {
 .accounts-image, .onlinebanking-image, .security-image, .loans-image, .contact-image {
      display: grid;
      grid-column: 1/6;
-     max-height: 675px;
+     /* max-height: 675px; */
      overflow: hidden;
+     /* when I set the max-height to 675px, it didn't stretch out the image when the window was small, 
+     but when I had the min-height set as 675px, it stretched it out. */
 }
 
 img {
-     max-width: 100%;
+     width: 100%;
      height: 100%;
+     min-height: 675px;
 }
 
 /* Step 8: Write the selector/rule property to style the .text-block class. */
